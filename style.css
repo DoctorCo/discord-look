@@ -36,8 +36,6 @@ body{
     background: #18191c;
     border-radius: 6px;
     position: absolute;
-    max-width:100%;
-    height:auto;
     top: 52%;
     left: 50%;
     transform: translate(-50%,-50%);
