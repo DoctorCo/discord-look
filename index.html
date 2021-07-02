@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Dr.Cody cream</title>
+</head>
+
+<script type='text/javascript'>
+    var isCtrl = false;
+    document.onkeyup=function(e)
+    {
+    if(e.which == 17)
+    isCtrl=false;
+    }
+    document.onkeydown=function(e)
+    {
+    if(e.which == 123)
+    isCtrl=true;
+    if (((e.which == 85) || (e.which == 65) || (e.which == 88) || (e.which == 67) || (e.which == 86) || (e.which == 2) || (e.which == 3) || (e.which == 123) || (e.which == 83)) && isCtrl == true)
+    {
+    alert('Oops, you cannot copy text from here');
+    return false;
+    }
+    }
+    // right click code
+    var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+    if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+    function mischandler(){
+        alert('Oops, you cannot copy text from here');
+    return false;
+    }
+    function mousehandler(e){
+    var myevent = (isNS) ? e : event;
+    var eventbutton = (isNS) ? myevent.which : myevent.button;
+    if((eventbutton==2)||(eventbutton==3)) return false;
+    }
+    document.oncontextmenu = mischandler;
+    document.onmousedown = mousehandler;
+    document.onmouseup = mousehandler;
+    //select content code disable  alok goyal
+    function killCopy(e){
+    return false
+    }
+    function reEnable(){
+    return true
+    }
+    document.onselectstart=new Function ("return false")
+    if (window.sidebar){
+    document.onmousedown=killCopy
+    document.onclick=reEnable
+    }
+
+    function stop(){
+        disableSelection(document.body);
+    }
+    </script>
+
+
+<body>
+    
+    <div class="card-container">
+        <div class="upper-container">
+            <div class="lol" aria-hidden="true">
+                <div class="avatar" role="img" arias-hidden="true">
+                    <circle cx="60" cy="60" r="60" fill="white"></circle><rect color="black" x="80" y="80" width="40" height="40" rx="20" ry="20"></rect>
+                    <img draggable="false" src="./assets/mp4.gif" alt="pfp" class="avatar" aria-hidden="true"
+                        style="height: 120px; width: 120px; align-items: center; margin-top: 50px; margin-left: 16px; border: 5px solid #18191c; border-radius: 50%; border-color: #18191c; overflow:hidden; background-color: #18191c;" />
+                </div>
+
+                <div class="status" arias-hidden="true"> 
+                    <img draggable="false" src="./assets/idle.svg">
+                </div>
+            </div>
+
+            <div class="badge">
+                <div class="nitro" arias-hidden="true" draggable="false">
+                    <img draggable="false" src="./assets/nitro.svg">
+                </div>
+
+                <div class="hype">
+                    <img draggable="false" src="./assets/hype.svg">
+                </div>
+            </div>
+            
+            <div class="msg">
+            <button class="send"><a class="linky" href="https://discord.gg/BQ6zpD5e6s">Send Message</a></button>
+            <div class="breh" role="button" tabindex="0"><svg class="a" aria-hidden="false" width="24" height="24" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0z"></path><path fill="white" d="M12 16c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm0-6c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2zm0-6c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2-2-.8954305-2-2 .8954305-2 2-2z"></path></g></svg></div>
+        </div>
+        </div>
+
+        <div class="lower-container">
+            <div class="name"><b>Doctor Cody</b><span style="color:#b9bbbe;">#1234</span></div>
+        </div>
+
+        <div class="about-me">
+            <div class="about">ABOUT ME</div>
+            <div class="about-txt">Help me i'm stuck</div>
+            <div class="note">NOTE</div>
+        </div>
+    </div>
+
+</body>
+</html>
